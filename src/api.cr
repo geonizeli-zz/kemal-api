@@ -1,6 +1,9 @@
-# TODO: Write documentation for `Api`
-module Api
-  VERSION = "0.1.0"
+require "kemal"
 
-  # TODO: Put your code here
+module Api
+  get "/" do
+    "Hello World!"
+  end
 end
+
+Kemal.run
