@@ -1,19 +1,10 @@
 require "kemal"
-require "json"
+require "jennifer"
+require "jennifer/adapter/postgres"
 
-module Api
-  before_get do |env|
-    puts "Receiving a GET"
-    env.response.content_type = "application/json"
-  end
-
-  get "/" do
-    {
-      "framework": "Kemal",
-      "language": "Crystal",
-      "message": "Hello, World!"
-    }.to_json
-  end
-end
+require "./controllers/**"
+require "./models/**"
+require "./views/**"
+require "../config/*"
 
 Kemal.run
