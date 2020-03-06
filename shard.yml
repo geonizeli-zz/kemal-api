@@ -1,0 +1,13 @@
+name: api
+version: 0.1.0
+
+authors:
+  - João Victor <jvsouzax@gmail.com>
+
+targets:
+  api:
+    main: src/api.cr
+
+crystal: 0.33.0
+
+license: MIT
