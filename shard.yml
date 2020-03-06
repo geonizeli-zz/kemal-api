@@ -22,3 +22,7 @@ dependencies:
 
   pg:
     github: will/crystal-pg
+
+  sam:
+    github: imdrasil/sam.cr
+    version: 0.3.2
