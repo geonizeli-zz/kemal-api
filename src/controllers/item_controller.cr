@@ -8,3 +8,20 @@ get "/items" do |env|
 
   hash.to_json
 end
+
+post "/items" do |env|
+  params = env.params.body["name"]
+  if !params.nil? && params.size >= 3
+    Item.create(name: params)
+  else
+    {
+      message: "This function need 'name' to Item"
+    }.to_json
+  end
+
+  rescue
+
+  {
+    message: "'name' can't be null"
+  }.to_json
+end
